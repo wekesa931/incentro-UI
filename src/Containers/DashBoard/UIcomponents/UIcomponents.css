@@ -1,0 +1,28 @@
+.summary-sticker {
+    color: white;
+    font-size: 18px;
+    width: 89%;
+    font-weight: 500;
+    display: flex;
+    margin: 1%;
+    background: green;
+    border-radius: 5px;
+}
+.logo-icon {
+    width: 30%;
+    font-size: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1%;
+    background: #ffffff2b;
+}
+.sticker-content {
+    width: 70%;
+    padding: 4% 1%;
+}
+.sticker-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
