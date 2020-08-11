@@ -11,4 +11,5 @@ export class DashBoardRepository {
     showSideNav: boolean = false;
     loadingSummaryDetails: boolean = false;
     summaryData: SummaryData[] = []
+    setLoading: boolean = false;
 }

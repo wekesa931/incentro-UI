@@ -7,7 +7,7 @@ const CompanyDetail = () => {
             <img src={logo} alt="logo"/>
         </div>
         <div className='company-name'>
-            <p>Conduit Technologies</p>
+            <p>Conduit</p>
         </div>
     </div>
 }

@@ -11,17 +11,17 @@ let potter: DashBoardPotter
  
 const CustomerGraph = (props: IProps) => {
     potter = props.potter;
-    const [data, setdata] = useState([] as { name: string, pv: number}[])
+    const [data, setdata] = useState([] as { name: string, time: number}[])
     useEffect(() => {
         let graphData = potter.context.repository.summaryData.map(dat => (
             {
                 name: dat.date,
-                pv: dat.customers
+                time: dat.customers
             }
         ))
         setdata(graphData)
     }, [potter.context.repository.summaryData]);
-    return <LineGraph data={data} {...configs.SimpleLineCharts} />;
+    return <LineGraph data={data} ylabel={'Customers'} {...configs.SimpleLineCharts} />;
 }
  
 export default CustomerGraph;

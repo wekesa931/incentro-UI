@@ -8,7 +8,6 @@ export const HttpMethod = {
     POST: "GET",
     GET: "GET"
 }
-export const authToken = localStorage.getItem("id_token")
 
 export const callPoint = {
     ROOT_URL: 'https://api.demo.reja.ai'
@@ -21,4 +20,8 @@ export interface SummaryData{
     revenue: number;
     transactions: number;
     year: number;
+}
+export interface FormInput {
+    username: string,
+    password: string
 }

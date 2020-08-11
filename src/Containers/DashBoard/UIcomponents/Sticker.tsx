@@ -1,20 +1,14 @@
 import React from 'react';
-import { UnorderedListOutlined } from '@ant-design/icons';
 import './UIcomponents.css';
 
-interface IProps {
-    logo: HTMLElement
-}
-
 // @ts-ignore
-const SummarySticker = (props: Iprops) => {
-
+const SummarySticker = (props) => {
   return (
-      <div className='summary-sticker'>
-        <div className='logo-icon'><UnorderedListOutlined /></div>
+      <div className='summary-sticker' style={{ backgroundColor: `${props.color}`}}>
+        <div className='logo-icon'>{props.logo}</div>
         <div className='sticker-content'>
-            <div>Customers</div>
-            <div>200000</div>
+            <div>{props.sum}</div>
+            <div>{props.name}</div>
         </div>
       </div>
     

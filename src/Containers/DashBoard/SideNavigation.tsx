@@ -2,6 +2,7 @@ import React from "react";
 import Sidebar from "react-sidebar";
 import DashBoardPotter from "./Potter/DashBoardPotter";
 import { UnorderedListOutlined } from '@ant-design/icons';
+import NavigationComponents from "./UIcomponents/NavigationComponents";
 
 interface IProps {
   potter: DashBoardPotter
@@ -17,15 +18,17 @@ const SideNavigation = (props: IProps) => {
  
   return (
     <Sidebar
-      sidebar={<b>Sidebar content</b>}
+      sidebar={<NavigationComponents />}
       // @ts-ignore
       open={potter.context.repository.showSideNav}
       onSetOpen={onSetSidebarOpen}
-      styles={{ sidebar: { background: "black", width: "264px" } }}
+      styles={{ sidebar: { background: "#001529", width: "264px" } }}
     >
-      <div className='bread-crumb'>
-                <UnorderedListOutlined onClick={() => potter.pushToRepository({ showSideNav: true })}/>
-            </div>
+        <div className='bread-crumb'>
+          <span>
+            <UnorderedListOutlined onClick={() => potter.pushToRepository({ showSideNav: true })}/>
+          </span>
+        </div>
       </Sidebar>
   );
 }

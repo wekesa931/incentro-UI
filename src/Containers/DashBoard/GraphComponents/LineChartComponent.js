@@ -12,7 +12,7 @@ import {
 
 class LineGraph extends Component {
   render() {
-    const { data, width, height, colors } = this.props;
+    const { data, width, height, colors, ylabel } = this.props;
     // <div className="isoChartWrapper">
     return (
       <div className='chart-stypes'>
@@ -23,13 +23,22 @@ class LineGraph extends Component {
           margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
         >
           <XAxis dataKey="name" stroke={colors[3]} />
-          <YAxis stroke={colors[3]} />
+          <YAxis
+            label={{
+              value: ylabel,
+              position: "insideLeft",
+              angle: -90,
+              offset: -10,
+              dy: 100,
+              height: 200
+              }}
+           stroke={colors[3]} />
           <CartesianGrid strokeDasharray="3 3" />
           <Tooltip />
           <Legend />
           <Line
             type="monotone"
-            dataKey="pv"
+            dataKey="time"
             stroke={colors[0]}
             activeDot={{ r: 8 }}
           />

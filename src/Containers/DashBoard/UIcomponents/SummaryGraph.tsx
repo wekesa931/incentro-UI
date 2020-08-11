@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Tabs, Radio } from 'antd';
+import { Tabs } from 'antd';
 import RevenueGraph from '../GraphComponents/RevenueGraph';
 import DashBoardPotter from '../Potter/DashBoardPotter';
 import CustomerGraph from '../GraphComponents/CustomerGraph';
@@ -14,19 +14,24 @@ let potter: DashBoardPotter;
 
 const SummaryGraph = (props: IProps) => {
     potter = props.potter
-    const [mode, setmode] = useState("top")
 
     return (
-      <div>
+      <div className='tab-headers' style={{ margin: '1px 10px'}}>
         <Tabs defaultActiveKey="1" tabPosition={"top"}>
-            <TabPane tab={"one"} key={"one"}>
-              <RevenueGraph potter={potter} />
+            <TabPane tab={"Revenue"} key={"one"}>
+              <div className='graph-cont'>
+                <RevenueGraph potter={potter} />
+              </div>
             </TabPane>
-            <TabPane tab={"two"} key={"two"}>
+            <TabPane tab={"Customers"} key={"two"}>
+              <div className='graph-cont'>
                 <CustomerGraph potter={potter} />
+              </div>
             </TabPane>
-            <TabPane tab={"three"} key={"three"}>
+            <TabPane tab={"Transactions"} key={"three"}>
+              <div className='graph-cont'>
                 <TransactionsGraph potter={potter} />
+              </div>
             </TabPane>
         </Tabs>
       </div>

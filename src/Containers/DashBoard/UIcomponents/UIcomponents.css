@@ -1,28 +1,105 @@
 .summary-sticker {
+    font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 18px;
-    width: 89%;
+    width: 90%;
     font-weight: 500;
     display: flex;
-    margin: 1%;
-    background: green;
+    margin: 5px;
     border-radius: 5px;
 }
+
 .logo-icon {
-    width: 30%;
+    width: 83px;
     font-size: 29px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1%;
+    padding: 1px;
     background: #ffffff2b;
 }
 .sticker-content {
-    width: 70%;
-    padding: 4% 1%;
+    padding: 10px 4px;
 }
 .sticker-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+.graph-cont {
+    overflow: scroll;
+    display: flex;
+    justify-content: unset;
+}
+.select-period {
+    margin-bottom: 3px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.side-item p{
+    margin-left: 40px;
+}
+.tab-headers {
+    font-family: 'Roboto', sans-serif;
+}
+.nav-components {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70%;
+    padding: 0 24px;
+}
+.side-img {
+    display: flex;
+    justify-content: center;
+    margin-top: 8%;
+}
+.side-img img {
+    width: 54px;
+}
+.side-item {
+    cursor: pointer;
+    display: flex;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    align-items: baseline;
+}
+@media only screen and (min-width: 550px) {
+    .summary-sticker {
+        width: 48%;
+    }
+    .sticker-container {
+        justify-content: unset;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .side-img img {
+        width: 83px;
+    }
+    .graph-cont {
+        justify-content: center;
+    }
+    .summary-sticker {
+        width: 30%;
+    }
+    .sticker-container {
+        justify-content: space-around;
+    }
+    .mini-sidenav {
+        width: 215px;
+    }
+    .overview-cont-summary{
+        width: 83%;
+    }
+    .side-item p {
+        display: block;
+    }
+}
+.summary-loader {
+    position: absolute;
+    top: 100%;
+    z-index: 1000;
 }

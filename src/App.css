@@ -42,6 +42,13 @@
     padding: 70px 20px;
   }
 }
+.overview-cont-summary{
+  font-family: 'Roboto', sans-serif;
+}
+.nav-icon {
+  margin: 0 5px;
+  font-size: 17px;
+}
 .login-form-button {
   width: 100%;
   height: 12%;
@@ -52,6 +59,7 @@
   margin: 8% 0;
 }
 .company-name p{
+  font-family: 'Roboto', sans-serif;
   font-size: 17px;
 }
 .ant-input-affix-wrapper {
@@ -91,13 +99,48 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 5%;
+  margin: 10px;
 }
 .timeline-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
-/* .timeline-input .ant-select-show-arrow {
-  width: 200px !important;
-} */
+.bread-crumb {
+  margin-left: 0;
+}
+
+@media only screen and (max-width: 769px) {
+  .mini-sidenav {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 770px) {
+  .side-item p {
+    display: none;
+  }
+  .side-item span {
+    margin: 10px;
+  }
+
+  .overview-cont {
+    display: flex;
+  }
+  .mini-sidenav {
+    width: 82px;
+    z-index: 5000;
+    width: 82px;
+    background: #001529;
+  }
+  .overview-cont-summary{
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 770px){
+  .overview-cont-summary {
+    width: 90%;
+  }
+
+}

@@ -4,7 +4,7 @@ import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import axios from 'axios';
 import AuthPotter from './Potter/AuthPotter';
 import { Store } from 'antd/lib/form/interface';
-import AppStrings, { callPoint } from '../../Utility/AppStrings';
+import { callPoint } from '../../Utility/AppStrings';
 import Loader from '../../Utility/Loader';
 import { Redirect } from 'react-router-dom';
 import { PRIVATE_ROUTE } from '../../Utility/route.constants';
@@ -42,8 +42,8 @@ const SignInForm = (props: IProps) => {
               }
             })
             if(response.status === 200){
-              localStorage.setItem('id_token', response.data.access_token)
-              localStorage.setItem('client_id', response.data.user.client_id)
+              await localStorage.setItem('id_token', response.data.access_token)
+              await localStorage.setItem('client_id', response.data.user.client_id)
             }
             potter.pushToRepository({ displayLogInLoader: false })
         } catch(e) {
